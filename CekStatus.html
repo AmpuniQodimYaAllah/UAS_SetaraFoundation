@@ -3,25 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Recruitment Beasiswa</title>
+  <title>Cek Status Pendaftaran - Recruitment Beasiswa</title>
   <!-- Tambahkan link CSS Bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
-<style>
-  body{
-    background-image: url(Toga.png);
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-  }
-  .jumbotron {
-      background-color: rgba(89, 89, 89, 0.2);
-    }
-</style>
-
 <body>
-
-
   <header>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
       <a class="navbar-brand" href="#">Recruitment Beasiswa</a>
@@ -30,35 +16,37 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="homepage.html">Home</a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="Index.html">Beasiswa</a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="About.html"> About</a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="Contact.html">Contact</a>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Beasiswa</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
           </li>
         </ul>
       </div>
     </nav>
   </header>
 
-
-
   <main role="main" class="container mt-5">
-    <div class="jumbotron">
-      <h1 class="display-4">Selamat Datang di Recruitment Beasiswa</h1>
-      <p class="lead">Recruitment Beasiswa adalah platform untuk mencari dan melamar berbagai beasiswa yang sesuai dengan Anda.</p>
-      <hr class="my-4">
-      <p>Temukan peluang pendidikan yang tepat dan buka pintu menuju masa depan yang lebih baik.</p>
-      <a class="btn btn-primary btn-lg" href="Index.html" role="button">Cari Beasiswa</a>
-    </div>
+    <h1>Cek Status Pendaftaran</h1>
+    <form>
+      <div class="form-group">
+        <label for="nomorPendaftaran">Nomor Pendaftaran</label>
+        <input type="text" class="form-control" id="nomorPendaftaran" placeholder="Masukkan nomor pendaftaran">
+      </div>
+      <div class="form-group">
+        <label for="nomorIdentitas">Nomor Identitas Mahasiswa</label>
+        <input type="text" class="form-control" id="nomorIdentitas" placeholder="Masukkan nomor identitas mahasiswa">
+      </div>
+      <button type="submit" class="btn btn-primary">Cek Status</button>
+    </form>
   </main>
-<br>
 
   <footer class="footer bg-dark text-light text-center py-3">
     <div class="container">
