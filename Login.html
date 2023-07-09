@@ -1,62 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login - Recruitment Beasiswa</title>
-  <!-- Tambahkan link CSS Bootstrap -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-</head>
-<style>
-  .footer {
-      position: fixed;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      height: 50px; /* Tinggi footer, disesuaikan dengan kebutuhan Anda */
-      background-color: #f8f9fa;
-      padding: 20px;
-      text-align: center;
-    }
-</style>
-<body>
-  <div class="container">
-    <div class="row justify-content-center mt-5">
-      <div class="col-md-6">
-        <div class="card">
-          <div class="card-header">
-            <h3 class="text-center">Login</h3>
-          </div>
-          <div class="card-body">
-            <form>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="Enter your email">
-              </div>
-              <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" class="form-control" id="password" placeholder="Enter your password">
-              </div>
-              <div class="text-center">
-                <button type="submit" class="btn btn-primary">Login</button>
-              </div>
-            </form>
-          </div>
+<!-- Login -->
+<div class="global-container">
+    <div class="card login-form">
+        <div class="card-body">
+            <h1 class="card-title text-center">LOGIN</h1>
         </div>
-      </div>
-    </div>
+        <div  class="card-text">
+            <form action="register.php" method="POST">
+                <div class="mb-1 log-font">
+                  <label for="Email" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="email" placeholder="nama@contoh.com" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                  <span class="error-message a-font">Masukkan alamat email yang valid.</span>
+                </div>
+          <div class="log-font">
+                <div class="mb-1">
+                  <label for="username" class="form-label">Username</label>
+                  <input type="username" id="username" class="form-control" name="username" required>
+                <div class="mb-1">
+                  <label for="password" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="password" name="password" required>
+                </div>  
+            <div class="mb-1 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+              <input type="submit"  class="btn btn-primary" value="Login"><br></br>
+          </form>
+        </div>
+    </div> 
   </div>
+<script>
+    const emailInput = document.getElementById("email");
+    const errorMessage = document.querySelector(".error-message");
 
-  <footer class="footer bg-dark text-light text-center py-3" id="fixed-bottom">
-    <div class="container">
-      <span>&copy; 2023 Setara Foundation</span>
-    </div>
-    <br>
-  </footer>
-  
-  <!-- Tambahkan script JavaScript Bootstrap -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-</body>
-</html>
+    emailInput.addEventListener("input", function() {
+        if (emailInput.validity.valid) {
+            errorMessage.style.display = "none";
+        } else {
+            errorMessage.style.display = "block";
+        }   
+    });
+</script>
