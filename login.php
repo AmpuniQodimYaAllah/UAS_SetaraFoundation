@@ -22,7 +22,7 @@ if(isset($_COOKIE['cookie_username'])){
         $_SESSION['session_username'] = $cookie_username;
         $_SESSION['session_password'] = $cookie_password;
     }
-}
+}   
 
 if(isset($_SESSION['session_username'])){
     header("location:indexlogin.php");
@@ -134,7 +134,7 @@ if(isset($_POST['login'])){
                 </div>
                 <a href="contact.html" class="nav-item nav-link">Contact</a>
             </div>
-            <a href="register.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Login<i class="fa fa-arrow-right ms-3"></i></a>
+            <a href="register.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Masuk<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -162,12 +162,6 @@ if(isset($_POST['login'])){
                         <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
                         <input id="login-password" type="password" class="form-control" name="password" placeholder="password">
                     </div>
-                    <div class="input-group">
-                        <div class="checkbox">
-                        <label>
-                            <input id="login-remember" type="checkbox" name="ingatpassword" value="1" <?php if($password == '1') echo "checked"?>> Ingat Aku
-                        </label>
-                        </div>
                     </div>
                     <div style="margin-top:10px" class="form-group">
                         <div class="col-sm-12 controls">
@@ -240,7 +234,7 @@ if(isset($_POST['login'])){
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
+                        &copy; <a class="border-bottom" href="#">Setara Foundation</a>, All Right Reserved.
 
                         <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
                         Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
