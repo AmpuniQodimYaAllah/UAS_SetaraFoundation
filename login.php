@@ -168,6 +168,7 @@ if(isset($_POST['login'])){
                             <input type="submit" name="login" class="btn btn-success" value="Login"/>
                         </div>
                     </div>
+                    <p class="warna">Belum punya akun?<a href="register.html">Daftar</a></p>
                 </form>    
             </div>                     
         </div>  
