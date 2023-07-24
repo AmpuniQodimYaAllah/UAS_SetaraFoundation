@@ -1,9 +1,9 @@
 <?php
 session_start();
-$host = 'localhost';
-$username = 'root';
-$password = '';
-$database = 'loginweb';
+$host = 'komodo.kencang.id';
+$username = 'beasisw1_root';
+$password = 'o0]?MTkRQAXA';
+$database = 'beasisw1_loginweb';
 $conn = mysqli_connect($host, $username, $password, $database);
 if (!$conn) {
     die("Koneksi gagal: " . mysqli_connect_error());

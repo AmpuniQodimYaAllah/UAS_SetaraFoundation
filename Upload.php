@@ -46,7 +46,38 @@ if (!isset($_SESSION['session_username'])){
         </div>
     </div>
     <!-- Spinner End -->
+    <?php
+$host = 'komodo.kencang.id';
+$username = 'beasisw1_root';
+$password = 'o0]?MTkRQAXA';
+$database = 'beasisw1_loginweb';
+$conn = mysqli_connect($host, $username, $password, $database);
 
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    if (isset($_POST['proses'])) {
+$NIM = $_POST['NIM'];
+$Nama_lengkap= $_POST['Nama_lengkap'];
+$Universitas = $_POST['Universitas'];
+$Prodi = $_POST['Prodi'];
+$Semester = $_POST['Semester'];
+$Alamat = $_POST['Alamat'];
+$Domisili = $_POST['Domisili'];
+$Tempat_Tanggal_Lahir = $_POST['Tempat_Tanggal_Lahir'];
+$Beasiswa_yang_diinginkan = $_POST['Beasiswa_yang_diinginkan'];
+$Nomor_telepon_aktif = $_POST['Nomor_telepon_aktif'];
+$Email = $_POST['Email'];
+
+
+  // Memasukkan NIM ke dalam database
+  $direktori = "berkas/";
+  $file_name=$_FILES['Nama_file']['name'];
+  move_uploaded_file($_FILES['Nama_file']['tmp_name'],$direktori.$file_name);
+
+  mysqli_query($conn, "INSERT INTO upload (NIM, Nama_lengkap, Universitas, Prodi, Semester, Alamat, Domisili, Tempat_Tanggal_Lahir, Beasiswa_yang_diinginkan, Nomor_telepon_aktif, Email, Nama_file) VALUES ('$NIM', '$Nama_lengkap', '$Universitas', '$Prodi', '$Semester', '$Alamat', '$Domisili', '$Tempat_Tanggal_Lahir', '$Beasiswa_yang_diinginkan', '$Nomor_telepon_aktif', '$Email', '$file_name')");
+
+  echo "<b>File berhasil diupload";
+}}
+?>
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow">
@@ -82,7 +113,7 @@ if (!isset($_SESSION['session_username'])){
         <div class="card-body">
             <h2 class="card-title text-center">FORM PENDAFTARAN</h2>
         </div>
-        <form action="uploadsetting.php" method="POST" enctype="multipart/form-data">
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" enctype="multipart/form-data">
         <div  class="card-text">
                 <div class="mb-1">
                     <label for="NIM">NIM</label> <br>

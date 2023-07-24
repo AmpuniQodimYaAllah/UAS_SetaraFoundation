@@ -48,10 +48,10 @@
 <?php
 if(isset($_POST['nim'])){
   // Hubungkan dengan database SQL
-  $host = 'localhost';
-  $username = 'root';
-  $password = '';
-  $database = 'loginweb'; // Ganti dengan nama database Anda
+  $host = 'komodo.kencang.id';
+$username = 'beasisw1_root';
+$password = 'o0]?MTkRQAXA';
+  $database = 'beasisw1_loginweb'; // Ganti dengan nama database Anda
   $conn = mysqli_connect($host, $username, $password, $database);
 
   // Periksa koneksi ke database
