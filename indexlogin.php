@@ -42,6 +42,9 @@ if (!isset($_SESSION['session_username'])){
     <link href="css/style.css" rel="stylesheet">
 </head>
 
+
+</style>
+
 <body>
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -62,20 +65,14 @@ if (!isset($_SESSION['session_username'])){
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="indexlogin.php" class="nav-item nav-link active">Home</a>
-                <a href="aboutlogin.html" class="nav-item nav-link">About</a>
-                <a href="courseslogin.html" class="nav-item nav-link">Courses</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                    <div class="dropdown-menu fade-down m-0">
-                        <a href="teamlogin.html" class="dropdown-item">Our Team</a>
-                        <a href="testimoniallogin.html" class="dropdown-item">Testimonial</a>
-                        <a href="404login.html" class="dropdown-item">404 Page</a>
-                    </div>
-                </div>
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
+                <a onclick="scrollToPosition(111)" class="nav-item nav-link btn" >Home</a>
+                <a onclick="scrollToPosition(860)" class="nav-item nav-link btn">Keistimewaan</a>
+                <a onclick="scrollToPosition(1500)" class="nav-item nav-link btn">About</a>
+                <a onclick="scrollToPosition(2270)" class="nav-item nav-link btn">Kategori Beasiswa</a>
+                <a onclick="scrollToPosition(2920)" class="nav-item nav-link btn">Testimoni</a>
+                <a onclick="scrollToPosition(5291)" class="nav-item nav-link btn">Contact</a>
             </div>
-            <a href="Logout.php" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Logout<i class="fa fa-arrow-right ms-3"></i></a>
+            <a href="logout.php" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Keluar<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -92,9 +89,9 @@ if (!isset($_SESSION['session_username'])){
                             <div class="col-sm-10 col-lg-8">
                                 <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Website Beasiswa terpercaya</h5>
                                 <h1 class="display-3 text-white animated slideInDown">Platform beasiswa terpopuler</h1>
-                                <p class="fs-5 text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea sanctus eirmod elitr.</p>
-                                <a href="Upload.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Ajukan Beasiswa</a>
-                                <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a>
+                                <p class="fs-5 text-white mb-4 pb-2">Beasiswa kami menyediakan kesempatan emas bagi para pelajar yang berpotensi untuk mewujudkan impian akademik mereka.</p>
+                                <a href="Upload.php" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Ajukan Beasiswa</a>
+                                <a href="cekstatus.php" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Cek Kelulusan</a>
                             </div>
                         </div>
                     </div>
@@ -108,9 +105,9 @@ if (!isset($_SESSION['session_username'])){
                             <div class="col-sm-10 col-lg-8">
                                 <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Website Beasiswa terpercaya</h5>
                                 <h1 class="display-3 text-white animated slideInDown">Dapatkan beasiswa dengan mudah</h1>
-                                <p class="fs-5 text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea sanctus eirmod elitr.</p>
-                                <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
-                                <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a>
+                                <p class="fs-5 text-white mb-4 pb-2">Kami dengan senang hati memberikan beasiswa kepada mereka yang berbakat dan berdedikasi untuk meraih prestasi dalam pendidikan.</p>
+                                <a href="Upload.php" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Ajukan Beasiswa</a>
+                                <a href="cekstatus.php" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Cek Kelulusan</a>
                             </div>
                         </div>
                     </div>
@@ -129,8 +126,8 @@ if (!isset($_SESSION['session_username'])){
                     <div class="service-item text-center pt-3">
                         <div class="p-4">
                             <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
-                            <h5 class="mb-3">Skilled Instructors</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                            <h5 class="mb-3">What Makes Us Different</h5>
+                            <p>Selain mendapatkan dana beasiswa selama satu tahun, penerima beasiswa juga mendapatkan berbagai macam pelatihan soft skills</p>
                         </div>
                     </div>
                 </div>
@@ -138,8 +135,8 @@ if (!isset($_SESSION['session_username'])){
                     <div class="service-item text-center pt-3">
                         <div class="p-4">
                             <i class="fa fa-3x fa-globe text-primary mb-4"></i>
-                            <h5 class="mb-3">Online Classes</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                            <h5 class="mb-3">Jaringan dan Pengembangan Diri</h5>
+                            <p>Mahasiswa penerima beasiswa dari Setara Foundation memiliki akses ke jaringan dan sumber daya yang luas, termasuk mentorship, pelatihan, dan peluang pengembangan diri untuk membantu mereka meraih kesuksesan dalam studi mereka.</p>
                         </div>
                     </div>
                 </div>
@@ -147,8 +144,8 @@ if (!isset($_SESSION['session_username'])){
                     <div class="service-item text-center pt-3">
                         <div class="p-4">
                             <i class="fa fa-3x fa-home text-primary mb-4"></i>
-                            <h5 class="mb-3">Home Projects</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                            <h5 class="mb-3">Kesetaraan Pendidikan Tanpa Batasan</h5>
+                            <p>Setara Foundation berkomitmen untuk memberikan kesempatan pendidikan yang setara bagi semua individu, tanpa memandang latar belakang sosial, ekonomi, atau etnis.</p>
                         </div>
                     </div>
                 </div>
@@ -156,8 +153,8 @@ if (!isset($_SESSION['session_username'])){
                     <div class="service-item text-center pt-3">
                         <div class="p-4">
                             <i class="fa fa-3x fa-book-open text-primary mb-4"></i>
-                            <h5 class="mb-3">Book Library</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                            <h5 class="mb-3">Mendorong Perubahan Sosial melalui Pendidikan</h5>
+                            <p>Setara Foundation berupaya untuk menciptakan perubahan sosial dengan memberikan kesempatan kepada mahasiswa yang kurang beruntung untuk meraih pendidikan tinggi dan mencapai impian mereka.</p>
                         </div>
                     </div>
                 </div>
@@ -178,30 +175,25 @@ if (!isset($_SESSION['session_username'])){
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                     <h6 class="section-title bg-white text-start text-primary pe-3">About Us</h6>
-                    <h1 class="mb-4">Welcome to eLEARNING</h1>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                    <h1 class="mb-4">Selamat Datang di Setara Foundation</h1>
+                    <p class="mb-4">Sejak 1984, Setara Foundation terus konsisten dalam memberikan kontribusi terhadap dunia pendidikan di Indonesia. Langkah ini diawali kesadaran bahwa pendidikan merupakan salah satu upaya untuk meningkatkan kesejahteraan masyarakat dan bangsa dalam mewujudkan masa depan yang lebih baik.</p>
+                    <p class="mb-4">Lebih dari 12.880 mahasiswa berprestasi telah menjadi penerima program. Mereka berasal dari berbagai macam latar belakang pendidikan di lebih dari 123 perguruan tinggi unggulan di seluruh 34 provinsi di Indonesia. Sebuah bukti keseriusan Setara Foundation dalam komitmennya membangun bangsa melalui pendidikan.</p>
                     <div class="row gy-2 gx-4 mb-4">
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Skilled Instructors</p>
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Setara Academic Excellence Scholarship</p>
                         </div>
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Online Classes</p>
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Setara Young Leaders Scholarship</p>
                         </div>
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>International Certificate</p>
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Setara Research and Innovation Scholarship</p>
                         </div>
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Skilled Instructors</p>
-                        </div>
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Online Classes</p>
-                        </div>
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>International Certificate</p>
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Setara Community Service Scholarship</p>
                         </div>
                     </div>
-                    <a class="btn btn-primary py-3 px-5 mt-2" href="">Read More</a>
+                    <a class="btn btn-primary py-3 px-5 mt-2" href="Upload.php">Ajukan beasiswa</a>
+                    <a href="cekstatus.php" class="btn btn-primary py-3 px-5 mt-2 animated slideInRight">Cek Kelulusan</a>
                 </div>
             </div>
         </div>
@@ -213,47 +205,49 @@ if (!isset($_SESSION['session_username'])){
     <div class="container-xxl py-5 category">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Categories</h6>
-                <h1 class="mb-5">Courses Categories</h1>
+                <h6 class="section-title bg-white text-center text-primary px-3">Kategori Beasiswa</h6>
+                <h1 class="mb-4">Kategori Beasiswa di Setara Foundation</h1>
             </div>
             <div class="row g-3">
                 <div class="col-lg-7 col-md-6">
                     <div class="row g-3">
                         <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
-                            <a class="position-relative d-block overflow-hidden" href="">
+                            <a class="position-relative d-block overflow-hidden" >
                                 <img class="img-fluid" src="img/cat-1.jpg" alt="">
                                 <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
-                                    <h5 class="m-0">Web Design</h5>
-                                    <small class="text-primary">49 Courses</small>
+                                    <h5 class="m-0">Setara Academic Excellence Scholarship</h5>
+                                    <small class="text-primary">30 Students</small>
                                 </div>
                             </a>
                         </div>
                         <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
-                            <a class="position-relative d-block overflow-hidden" href="">
+                            <a class="position-relative d-block overflow-hidden" >
                                 <img class="img-fluid" src="img/cat-2.jpg" alt="">
                                 <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
-                                    <h5 class="m-0">Graphic Design</h5>
-                                    <small class="text-primary">49 Courses</small>
+                                    <h5 class="m-0">Setara Young Leaders Scholarship</h5>
+                                    <small class="text-primary">30 Students</small>
                                 </div>
                             </a>
                         </div>
                         <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
-                            <a class="position-relative d-block overflow-hidden" href="">
+                            <a class="position-relative d-block overflow-hidden">
                                 <img class="img-fluid" src="img/cat-3.jpg" alt="">
                                 <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
-                                    <h5 class="m-0">Video Editing</h5>
-                                    <small class="text-primary">49 Courses</small>
+                                    <h5 class="m-0">Setara Community Service Scholarship</h5>
+                                    <small class="text-primary">40 Students</small>
                                 </div>
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s" style="min-height: 350px;">
-                    <a class="position-relative d-block h-100 overflow-hidden" href="">
+                    <a class="position-relative d-block h-100 overflow-hidden">
                         <img class="img-fluid position-absolute w-100 h-100" src="img/cat-4.jpg" alt="" style="object-fit: cover;">
                         <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin:  1px;">
-                            <h5 class="m-0">Online Marketing</h5>
-                            <small class="text-primary">49 Courses</small>
+                            <h5 class="m-0">Setara Research and Innovation Scholarship
+
+                            </h5>
+                            <small class="text-primary">40 Students</small>
                         </div>
                     </a>
                 </div>
@@ -262,111 +256,12 @@ if (!isset($_SESSION['session_username'])){
     </div>
     <!-- Categories Start -->
 
-
-    <!-- Courses Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Courses</h6>
-                <h1 class="mb-5">Popular Courses</h1>
-            </div>
-            <div class="row g-4 justify-content-center">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="course-item bg-light">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid" src="img/course-1.jpg" alt="">
-                            <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
-                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4 pb-0">
-                            <h3 class="mb-0">$149.00</h3>
-                            <div class="mb-3">
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small>(123)</small>
-                            </div>
-                            <h5 class="mb-4">Web Design & Development Course for Beginners</h5>
-                        </div>
-                        <div class="d-flex border-top">
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>John Doe</small>
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>1.49 Hrs</small>
-                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>30 Students</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="course-item bg-light">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid" src="img/course-2.jpg" alt="">
-                            <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
-                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4 pb-0">
-                            <h3 class="mb-0">$149.00</h3>
-                            <div class="mb-3">
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small>(123)</small>
-                            </div>
-                            <h5 class="mb-4">Web Design & Development Course for Beginners</h5>
-                        </div>
-                        <div class="d-flex border-top">
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>John Doe</small>
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>1.49 Hrs</small>
-                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>30 Students</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="course-item bg-light">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid" src="img/course-3.jpg" alt="">
-                            <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
-                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Login</a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4 pb-0">
-                            <h3 class="mb-0">$149.00</h3>
-                            <div class="mb-3">
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small>(123)</small>
-                            </div>
-                            <h5 class="mb-4">Web Design & Development Course for Beginners</h5>
-                        </div>
-                        <div class="d-flex border-top">
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>John Doe</small>
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>1.49 Hrs</small>
-                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>30 Students</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Courses End -->
-
-
     <!-- Team Start -->
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Instructors</h6>
-                <h1 class="mb-5">Expert Instructors</h1>
+                <h6 class="section-title bg-white text-center text-primary px-3">Testimoni</h6>
+                <h1 class="mb-1">Kata Para Alumni</h1>
             </div>
             <div class="row g-4">
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -382,8 +277,10 @@ if (!isset($_SESSION['session_username'])){
                             </div>
                         </div>
                         <div class="text-center p-4">
-                            <h5 class="mb-0">Instructor Name</h5>
-                            <small>Designation</small>
+                            <h5 class="mb-0">WAHYU RIZKY ADMAJA</h5>
+                            <p>BESWAN SETARA FOUNDATION 2011/2012</p>
+                            <small>Menjadi bagian dari keluarga besar Beswan Setara Foundation ialah sebuah "titik" terpenting dalam hidup saya. Semua soft skill yang saya butuhkan dalam pekerjaan saat ini, hampir seluruhnya saya dapat dari program-program inspiratif Beasiswa Setara Foundation.
+                                Untuk adik-adik yang telah menjadi Beswan Setara Foundation, selamat karena kalian sedang berada di track yang benar, ikuti seluruh pelatihannya dengan serius dan semangat!</small>
                         </div>
                     </div>
                 </div>
@@ -400,8 +297,10 @@ if (!isset($_SESSION['session_username'])){
                             </div>
                         </div>
                         <div class="text-center p-4">
-                            <h5 class="mb-0">Instructor Name</h5>
-                            <small>Designation</small>
+                            <h5 class="mb-0">KARISA LARAS WIDYADARI</h5>
+                            <p>BESWAN SETARA FOUNDATION 2014/2015</p>
+                            <small>Hingga saat ini, pengalaman menjadi Beswan Setara Foundation merupakan salah satu pengalaman yang sangat saya syukuri. Saya merasa bahwa banyak karakter-karakter yang saya miliki sekarang terbentuk dari pengalaman-pengalaman saya melalui program Beasiswa Setara Foundation. 
+                            </small>
                         </div>
                     </div>
                 </div>
@@ -418,8 +317,9 @@ if (!isset($_SESSION['session_username'])){
                             </div>
                         </div>
                         <div class="text-center p-4">
-                            <h5 class="mb-0">Instructor Name</h5>
-                            <small>Designation</small>
+                            <h5 class="mb-0">TEUKU JOHAR PRATAMA</h5>
+                            <p>BESWAN SETARA FOUNDATION 2018/2019</p>
+                            <small>Menjadi Beswan Setara Foundation, artinya dapat berkesempatan bertemu dan berinteraksi dengan banyak teman dari berbagai daerah dan latar belakang berbeda dari seluruh Indonesia. Jika sebelumnya lingkaran lingkungan saya cenderung dengan teman sedaerah, saat itu saya harus mulai belajar beradaptasi lebih dan berpikiran terbuka, banyak memahami dan mengobservasi bahwa adanya perbedaan bukanlah menjadi hambatan, namun dapat dijadikan kekuatan. </small>
                         </div>
                     </div>
                 </div>
@@ -436,8 +336,9 @@ if (!isset($_SESSION['session_username'])){
                             </div>
                         </div>
                         <div class="text-center p-4">
-                            <h5 class="mb-0">Instructor Name</h5>
-                            <small>Designation</small>
+                            <h5 class="mb-0">AULIA FIRDAUS BRILLIANTI</h5>
+                            <p>BESWAN SETARA FOUNDATION 2020/2021</p>
+                            <small>Begitu berharga visi yang coba saya raih, layaknya pengalaman menjadi Beswan Setara Foundation yang sangat saya syukuri. Saya bahagia bisa bertemu dengan ratusan mahasiswa berkualitas dari seluruh Indonesia. Kami berbeda, tetapi bersahabat, berani sukses muda dengan visi yang jelas melalui bimbingan pembina dan profesional.</small>
                         </div>
                     </div>
                 </div>
@@ -445,65 +346,20 @@ if (!isset($_SESSION['session_username'])){
         </div>
     </div>
     <!-- Team End -->
-
-
-    <!-- Testimonial Start -->
-    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container">
-            <div class="text-center">
-                <h6 class="section-title bg-white text-center text-primary px-3">Testimonial</h6>
-                <h1 class="mb-5">Our Students Say!</h1>
-            </div>
-            <div class="owl-carousel testimonial-carousel position-relative">
-                <div class="testimonial-item text-center">
-                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/testimonial-1.jpg" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Client Name</h5>
-                    <p>Profession</p>
-                    <div class="testimonial-text bg-light text-center p-4">
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
-                    </div>
-                </div>
-                <div class="testimonial-item text-center">
-                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/testimonial-2.jpg" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Client Name</h5>
-                    <p>Profession</p>
-                    <div class="testimonial-text bg-light text-center p-4">
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
-                    </div>
-                </div>
-                <div class="testimonial-item text-center">
-                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/testimonial-3.jpg" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Client Name</h5>
-                    <p>Profession</p>
-                    <div class="testimonial-text bg-light text-center p-4">
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
-                    </div>
-                </div>
-                <div class="testimonial-item text-center">
-                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/testimonial-4.jpg" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Client Name</h5>
-                    <p>Profession</p>
-                    <div class="testimonial-text bg-light text-center p-4">
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Testimonial End -->
         
-
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <br> <br>
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Quick Link</h4>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Privacy Policy</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
-                    <a class="btn btn-link" href="">FAQs & Help</a>
+                    <a class="btn btn-link" onclick="scrollToPosition(111)" >Home</a>
+                    <a class="btn btn-link" onclick="scrollToPosition(860)">Keistimewaan</a>
+                    <a class="btn btn-link" onclick="scrollToPosition(1500)">About</a>
+                    <a class="btn btn-link" onclick="scrollToPosition(2270)">Kategori beasiswa</a>
+                    <a class="btn btn-link" onclick="scrollToPosition(2920)">Testimoni</a>
+                    <a class="btn btn-link" onclick="scrollToPosition(5291)">Contact</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Contact</h4>
@@ -511,7 +367,7 @@ if (!isset($_SESSION['session_username'])){
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+08523112003</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>SetaraFoundation@gmail.com</p>
                     <div class="d-flex pt-2">
-                    <a class="btn btn-outline-light btn-social" href="https://twitter.com/Husen_Jafar"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://twitter.com/Husen_Jafar"><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/vladimir putin"><i class="fab fa-facebook-f"></i></a>
                         <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@qodimbalighghonim9965"><i class="fab fa-youtube"></i></a>
                         <a class="btn btn-outline-light btn-social" href="https://id.linkedin.com/in/momon-momon-35b52a88?trk=people-guest_people_search-card"><i class="fab fa-linkedin-in"></i></a>
@@ -541,11 +397,9 @@ if (!isset($_SESSION['session_username'])){
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    
-                    <div class="position-relative mx-auto" style="max-width: 400px;">
-                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
-                    </div>
+                   
+                    <h2 class="m-0 text-primary"><i><img src="img/logo.png" alt="" style="width: 125; height: auto;"></h2>
+
                 </div>
             </div>
         </div>
@@ -588,5 +442,15 @@ if (!isset($_SESSION['session_username'])){
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
+
+<script>
+    // Fungsi untuk menggulirkan halaman ke bawah dengan posisi tertentu
+    function scrollToPosition(position) {
+      window.scrollTo({
+        top: position,
+        behavior: 'smooth'
+      });
+    }
+  </script>
 
 </html>

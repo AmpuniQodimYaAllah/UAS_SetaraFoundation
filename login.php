@@ -122,29 +122,21 @@ if(isset($_POST['login'])){
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="index.html" class="nav-item nav-link active">Home</a>
-                <a href="about.html" class="nav-item nav-link">About</a>
-                <a href="courses.html" class="nav-item nav-link">Courses</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                    <div class="dropdown-menu fade-down m-0">
-                        <a href="team.html" class="dropdown-item">Our Team</a>
-                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                        <a href="404.html" class="dropdown-item">404 Page</a>
                     </div>
                 </div>
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
             </div>
-            <a href="register.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Masuk<i class="fa fa-arrow-right ms-3"></i></a>
+            <a href="login.php" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Masuk<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
     </nav>
     <!-- Navbar End -->
 
 
-
+    <br><h1 class="card-title text-center">Login</h1>
 <div class="container my-4">    
     <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
         <div class="panel panel-info" >
             <div class="panel-heading">
+            
                 <div class="panel-title">Login dan Masuk Ke Sistem</div>
             </div>      
             <div style="padding-top:30px" class="panel-body" >
@@ -175,28 +167,30 @@ if(isset($_POST['login'])){
     </div>
 </div>
 
- <!-- Footer Start -->
- <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+<!-- Footer Start -->
+<div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <br> <br>
         <div class="container py-5">
             <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Quick Link</h4>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Privacy Policy</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
-                    <a class="btn btn-link" href="">FAQs & Help</a>
-                </div>
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-white mb-3">Quick Link</h4>
+                <a class="btn btn-link" href="index.html" >Home</a>
+                <a class="btn btn-link" href="index.html">Keistimewaan</a>
+                <a class="btn btn-link" href="index.html">About</a>
+                <a class="btn btn-link" href="index.html">Kategori beasiswa</a>
+                <a class="btn btn-link" href="index.html">Testimoni</a>
+                <a class="btn btn-link" href="index.html">Contact</a>
+            </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Contact</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Jl. Raya Wonodadi, Gsmbar, Wonodadi, Kec. Wonodadi, Kabupaten Blitar, Jawa Timur (66155)</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+08523112003</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>SetaraFoundation@gmail.com</p>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://twitter.com/Husen_Jafar"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/vladimir putin"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@qodimbalighghonim9965"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://id.linkedin.com/in/momon-momon-35b52a88?trk=people-guest_people_search-card"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
@@ -223,11 +217,9 @@ if(isset($_POST['login'])){
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    
-                    <div class="position-relative mx-auto" style="max-width: 400px;">
-                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
-                    </div>
+                   
+                    <h2 class="m-0 text-primary"><i><img src="img/logo.png" alt="" style="width: 125; height: auto;"></h2>
+
                 </div>
             </div>
         </div>
@@ -264,5 +256,16 @@ if(isset($_POST['login'])){
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+</body>
+
+<script>
+    // Fungsi untuk menggulirkan halaman ke bawah dengan posisi tertentu
+    function scrollToPosition(position) {
+      window.scrollTo({
+        top: position,
+        behavior: 'smooth'
+      });
+    }
+  </script>
 </body>
 </html>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 09, 2023 at 09:07 PM
+-- Generation Time: Jul 24, 2023 at 06:59 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.1
 
@@ -40,15 +40,19 @@ CREATE TABLE `login` (
 
 CREATE TABLE `upload` (
   `NIM` bigint(20) NOT NULL,
-  `nama_file` varchar(255) NOT NULL
+  `Nama_lengkap` varchar(255) NOT NULL,
+  `Universitas` varchar(255) NOT NULL,
+  `Prodi` varchar(255) NOT NULL,
+  `Semester` varchar(255) NOT NULL,
+  `Alamat` varchar(255) NOT NULL,
+  `Domisili` varchar(255) NOT NULL,
+  `Tempat_Tanggal_Lahir` varchar(255) NOT NULL,
+  `Beasiswa_yang_diinginkan` varchar(255) NOT NULL,
+  `Nomor_telepon_aktif` varchar(255) NOT NULL,
+  `Email` varchar(255) NOT NULL,
+  `Nama_file` varchar(255) NOT NULL,
+  `kelulusan` varchar(25) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `upload`
---
-
-INSERT INTO `upload` (`NIM`, `nama_file`) VALUES
-(21083000100, 'Jobhub-main.zip');
 
 -- --------------------------------------------------------
 
