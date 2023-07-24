@@ -5,7 +5,10 @@ Website ini akan menyediakan informasi lengkap tentang berbagai jenis beasiswa y
 persyaratan pendaftaran, batas waktu, dan manfaat yang akan diterima oleh para penerima beasiswa.
 
 # Cara pemakaian
-pertama-tama, buka homepage.html, homepage.html merupakan halaman depan yang berisi penjelasan singkat mengenai Setara Foundation dan 
-tombol "cari beasiswa".
-
-User akan dibawa ke tampilan yang berisi "Daftar beasiswa", "Upload berkas", dan "cek status"
+pertama-tama, buka index.html yang merupakan beranda dari web kami. silahkan klik masuk di kanan atas
+lalu, anda akan ditampilkan menu login Silahkan isi username dan password. Jika belum punya akun, klik register (default username =root, password =root)
+lalu anda akan kembali di tampilan beranda. bedanya, sekarang anda dapat mengajukan beasiswa. silahkan klik ajukan beasiswa
+masukkan Semua yang harus diisi lalu klik upload
+jika sudah, maka anda menunggu hasil kelulusan.
+hasil kelulusan dapat dilihat dengan mengklik "cek kelulusan", disitu anda harus mengisi nim sesuai dengan nim pada saat anda mengajukan beasiswa, lalu klik "cek kelulusan"
+jika anda lulus, maka akan ada tampilan "Selamat ! anda lulus" jika tidak, maka akan ada tulisan "maaf, anda tidak lulus"
